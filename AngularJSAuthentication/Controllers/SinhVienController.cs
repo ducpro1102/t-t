@@ -2,7 +2,7 @@
 using System.Web.Http;
 using WebModel;
 
-namespace AngularJSAuthentication.Controllers
+namespace WebAPI.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class SinhVienController : ApiController

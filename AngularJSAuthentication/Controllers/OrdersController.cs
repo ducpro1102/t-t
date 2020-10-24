@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Web;
 using System.Web.Http;
 
-namespace AngularJSAuthentication.Controllers
+namespace WebAPI.Controllers
 {
     [RoutePrefix("api/Orders")]
     public class OrdersController : ApiController

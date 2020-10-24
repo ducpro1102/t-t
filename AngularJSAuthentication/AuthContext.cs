@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AngularJSAuthentication
+namespace WebAPI
 {
     public class AuthContext : IdentityDbContext<IdentityUser>
     {

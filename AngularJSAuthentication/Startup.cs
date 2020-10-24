@@ -1,4 +1,4 @@
-﻿using AngularJSAuthentication.Providers;
+﻿using WebAPI.Providers;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
@@ -8,8 +8,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-[assembly: OwinStartup(typeof(AngularJSAuthentication.API.Startup))]
-namespace AngularJSAuthentication.API
+[assembly: OwinStartup(typeof(WebAPI.API.Startup))]
+namespace WebAPI.API
 {
     public class Startup
     {

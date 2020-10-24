@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace AngularJSAuthentication.Models
+namespace WebAPI.Models
 {
     public class UserModel
     {
