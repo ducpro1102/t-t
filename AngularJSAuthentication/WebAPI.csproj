@@ -186,7 +186,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AuthContext.cs" />
-    <Compile Include="AuthRepository.cs" />
+    <Compile Include="Repository\AuthRepository.cs" />
     <Compile Include="Controllers\FontendController.cs" />
     <Compile Include="Controllers\BackendController.cs" />
     <Compile Include="Controllers\AccountController.cs" />

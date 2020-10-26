@@ -19,12 +19,14 @@ namespace WebAPI.Controllers
         {
             _repo = new AuthRepository();
         }
-        //View ds tin đăng(Đức)
-
+        //Đăng tin(Đức)
+        //View danh sách tin đã đăng(Đức)
         //View chi tiết tin đăng(Đức)
-        //Các quyền: cho đăng tin, quyền xóa tin(Người dùng) (Đức)
+        //Xóa tin đăng(Đức)
+        //Chatting(Đức)
+        //Màn hình home chứa danh sách tin đăng(Đức)
 
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
