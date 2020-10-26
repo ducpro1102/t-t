@@ -6,6 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using GenericServices;
+using WebModel;
+using Dapper;
 //using System.Web.Mvc;
 
 namespace WebAPI.Controllers
@@ -20,6 +23,22 @@ namespace WebAPI.Controllers
             _repo = new AuthRepository();
         }
         //View ds tin đăng(Đức)
+        public IHttpActionResult GetAllHouses()
+        {
+            GenericService<House> generic = new GenericService<House>();
+            var data = generic.ExcuteMany("getAllHouses", null);
+            return Ok(data);
+        }
+
+        [HttpPost]
+        public IHttpActionResult GetAllHouses(House model)
+        {
+            GenericService<House> generic = new GenericService<House>();
+            var param = new DynamicParameters();
+            param.Add("@Param", model.cus_ID);
+            var data = generic.ExcuteMany("getAllHouses", null);
+            return Ok(data);
+        }
         //View chi tiết tin đăng(Đức)
         //Các quyền: cho đăng tin, quyền xóa tin(Người dùng) (Đức)
 
