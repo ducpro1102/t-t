@@ -18,7 +18,7 @@ namespace GenericServices
         private static string DBO = string.Empty;
         public GenericService()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["AppConnection"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["AuthContext"].ConnectionString;
 
         }
 

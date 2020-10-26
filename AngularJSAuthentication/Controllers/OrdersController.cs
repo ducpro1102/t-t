@@ -11,15 +11,20 @@ namespace WebAPI.Controllers
     [RoutePrefix("api/Orders")]
     public class OrdersController : ApiController
     {
-        //[Authorize(Roles = "Customer")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
+        //[Authorize]
         [Route("")]
         public IHttpActionResult Get()
         {
             //var userId = RequestContext.Principal.Identity.GetUserId();
             var claimsIdentity = (ClaimsIdentity)RequestContext.Principal.Identity;
-            string xxx = claimsIdentity.Claims.FirstOrDefault(c => c.Type == "sub").Value;
-            
+            string strClaim = claimsIdentity.Claims.FirstOrDefault(c => c.Type == "sub").Value;
+
+            var userIdentity = (ClaimsIdentity)RequestContext.Principal.Identity;
+            var claims = userIdentity.Claims;
+            var roleClaimType = userIdentity.RoleClaimType;
+            var roles = claims.Where(c => c.Type == ClaimTypes.Role).ToList();
+
             return Ok(Order.CreateOrders());
         }
 

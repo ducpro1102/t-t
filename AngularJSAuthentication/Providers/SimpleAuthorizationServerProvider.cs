@@ -31,11 +31,11 @@ namespace WebAPI.Providers
                     return;
                 }
             }
-
+            //IdentityUserRole
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             identity.AddClaim(new Claim("sub", context.UserName));
             identity.AddClaim(new Claim("role", "user"));
-
+            identity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
             context.Validated(identity);
 
         }
