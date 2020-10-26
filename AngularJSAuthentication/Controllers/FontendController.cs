@@ -20,6 +20,7 @@ namespace WebAPI.Controllers
             _repo = new AuthRepository();
         }
         //View ds tin đăng(Đức)
+
         //View chi tiết tin đăng(Đức)
         //Các quyền: cho đăng tin, quyền xóa tin(Người dùng) (Đức)
 
