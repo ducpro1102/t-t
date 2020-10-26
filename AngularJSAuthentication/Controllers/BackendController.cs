@@ -10,40 +10,22 @@ using System.Web.Http;
 
 namespace WebAPI.Controllers
 {
-    [RoutePrefix("api/Account")]
-    public class AccountController : ApiController
+    [RoutePrefix("api/Backend")]
+    public class BackendController : ApiController
     {
         private AuthRepository _repo = null;
 
-        public AccountController()
+        public BackendController()
         {
             _repo = new AuthRepository();
         }
-        //Đăng ký(Hùng)
-        //Login(Hùng)
+        //Đăng tin(Đức)
+        //View danh sách tin đã đăng(Đức)
+        //View chi tiết tin đăng(Đức)
+        //Xóa tin đăng(Đức)
+        //Chatting(Đức)
+        //Màn hình home chứa danh sách tin đăng(Đức)
 
-
-        // POST api/Account/Register
-        [AllowAnonymous]
-        [Route("Register")]
-        public async Task<IHttpActionResult> Register(UserModel userModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            IdentityResult result = await _repo.RegisterUser(userModel);
-
-            IHttpActionResult errorResult = GetErrorResult(result);
-
-            if (errorResult != null)
-            {
-                return errorResult;
-            }
-
-            return Ok();
-        }
 
         protected override void Dispose(bool disposing)
         {

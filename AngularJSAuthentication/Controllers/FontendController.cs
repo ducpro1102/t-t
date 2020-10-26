@@ -10,40 +10,19 @@ using System.Web.Http;
 
 namespace WebAPI.Controllers
 {
-    [RoutePrefix("api/Account")]
-    public class AccountController : ApiController
+    [RoutePrefix("api/Fontend")]
+    public class FontendController : ApiController
     {
         private AuthRepository _repo = null;
 
-        public AccountController()
+        public FontendController()
         {
             _repo = new AuthRepository();
         }
-        //Đăng ký(Hùng)
-        //Login(Hùng)
+        //View ds tin đăng(Đức)
+        //View chi tiết tin đăng(Đức)
+        //Các quyền: cho đăng tin, quyền xóa tin(Người dùng) (Đức)
 
-
-        // POST api/Account/Register
-        [AllowAnonymous]
-        [Route("Register")]
-        public async Task<IHttpActionResult> Register(UserModel userModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            IdentityResult result = await _repo.RegisterUser(userModel);
-
-            IHttpActionResult errorResult = GetErrorResult(result);
-
-            if (errorResult != null)
-            {
-                return errorResult;
-            }
-
-            return Ok();
-        }
 
         protected override void Dispose(bool disposing)
         {
