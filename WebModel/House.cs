@@ -8,15 +8,21 @@ namespace WebModel
 {
     public class House
     {
-        public int hou_ID { get; set; }
-        public int cus_ID { get; set; }
-        public int street_ID { get; set; }
-        public int district_ID { get; set; }
-        public int province_ID { get; set; }
-        public int area_ID { get; set; }
-        public int ward_ID { get; set; }
-        public string prop_1 { get; set; }
-        public string prop_2 { get; set; }
-        public string prop_3 { get; set; }
+        public decimal hou_ID { get; set; }
+        public decimal cus_ID { get; set; }
+        public decimal street_ID { get; set; }
+        public decimal district_ID { get; set; }
+        public decimal province_ID { get; set; }
+        public decimal area_ID { get; set; }
+        public decimal ward_ID { get; set; }
+        public string address_detail { get; set; }
+        public decimal floor_area { get; set; }
+        public decimal u_floor_area { get; set; }
+        public decimal horizontal { get; set; }
+        public decimal verical { get; set; }
+        public decimal house_category { get; set; }
+        public decimal nobedroom { get; set; }
+        public decimal notoilet { get; set; }
+        public string direction { get; set; }
     }
 }
